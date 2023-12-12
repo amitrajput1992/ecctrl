@@ -13,6 +13,8 @@ import DynamicPlatforms from "./DynamicPlatforms";
 import ShotCube from "./ShotCube";
 import { useControls } from "leva";
 import CharacterModel from "./CharacterModel";
+import Controller from "./Controller";
+import CharacterModel2 from "./CharacterModel2";
 
 export default function Experience() {
   /**
@@ -56,7 +58,7 @@ export default function Experience() {
         {/* Keyboard preset */}
         <KeyboardControls map={keyboardMap}>
           {/* Character Control */}
-          <Ecctrl
+          <Controller
             debug
             animated
             followLight
@@ -66,8 +68,21 @@ export default function Experience() {
             autoBalanceDampingC={0.04}
           >
             {/* Replace your model here */}
-            <CharacterModel />
-          </Ecctrl>
+            <CharacterModel2 />
+          </Controller>
+
+          {/*<Ecctrl*/}
+          {/*  debug*/}
+          {/*  animated*/}
+          {/*  followLight*/}
+          {/*  springK={2}*/}
+          {/*  dampingC={0.2}*/}
+          {/*  autoBalanceSpringK={1.2}*/}
+          {/*  autoBalanceDampingC={0.04}*/}
+          {/*>*/}
+          {/*  /!* Replace your model here *!/*/}
+          {/*  <CharacterModel />*/}
+          {/*</Ecctrl>*/}
         </KeyboardControls>
 
         {/* Rough plan */}
